@@ -1,0 +1,212 @@
+.navbar{
+    /* display: flex; */
+    padding-top: 5px;
+    padding-bottom: 15px;
+    height: 50px;
+}
+
+.navbar .header-nav{
+    float: right;
+    margin-right: 25px;
+    list-style: none;
+}
+
+.navbar .header-nav .nav-item {
+    display: inline-block;
+}
+
+.navbar .nav-item .nav-link { 
+    text-decoration: none;    
+    color:#666666; 
+    text-transform:uppercase; 
+    font-size:14px; 
+    font-weight:500; 
+    padding:8px 0; 
+    letter-spacing:0.5px; 
+}
+
+.navbar .nav-item .nav-link i { 
+    padding: 10px;
+    visibility: hidden;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+#toggle-icon {
+    font-size: 30px;
+    float: right;
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+
+}
+
+.banner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    height: 120vh;
+    width: 100vw;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-image: url('img/france-perles-wizj0ppghD0-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.banner-img {
+    border-radius:50%; 
+    /* max-width:300px;  */
+    border:10px solid rgba(255,255,255,0.1); 
+}
+
+.banner h2 { 
+    color:#ffffff;
+    font-size:42px; 
+    letter-spacing:0.9px; 
+    font-weight:400; 
+    text-transform:uppercase; 
+    margin:0 0 15px; 
+}
+
+.banner h3 { color:#ffffff; 
+    font-size:35px; 
+    font-weight:400; 
+    letter-spacing:1px; 
+    margin:0 0 15px; 
+}
+
+.banner h4 { color:#ffffff; 
+    font-size:20px; 
+    font-weight:400; 
+    letter-spacing:1px; 
+    margin:0 0 15px; 
+}
+
+.banner .social-links a { 
+    color:#ffffff; 
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin:0 20px 20px 0; 
+}
+
+.info-buttons{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn-primary {
+    border-radius: 18px;
+    background-color: green;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.btn-primary i{
+    padding: 10px;
+}
+
+.btn-primary a{
+    text-decoration: none;
+    color: black;
+}
+.btn-primary a:visited{
+    color: black;
+}
+
+.btn-secondary {
+    border-radius: 18px;
+    background-color: gray;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.btn-secondary i{
+    padding: 10px;
+}
+
+.btn-secondary a{
+    text-decoration: none;
+    color: black;
+}
+.btn-secondary a:visited{
+    color: black;
+}
+
+.about-me {
+    display: flex;
+    /* width: 100vw; */
+    justify-content: space-evenly;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    flex-direction: row;
+}
+
+
+.about-me .about-left-col {
+     display: flex;
+    flex-direction: column; 
+    /* justify-content: flex-start; */
+    align-self: flex-start;
+}
+
+.about-me h4 {
+    text-align: center;
+}
+
+.about-me .about-right-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    align-self: flex-end;
+}
+
+
+/* Media Queries */
+@media (max-width: 800px){
+    #toggle-icon {
+        display: block;
+    }
+
+    .navbar .header-nav {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 50px;
+        left: -120%;
+        text-align: center;
+        transition: .5s;
+        background: rgba(135, 207, 235, 0.85);
+        z-index: 1000;
+
+    }
+
+    .navbar .header-nav .nav-item {
+        display: block;
+        margin: 40px;
+    }
+
+    .navbar .nav-item .nav-link i { 
+        padding: 10px;
+        visibility: visible;
+    }
+
+    .navbar .nav-item .nav-link { 
+        color: black; 
+    }
+
+    #menu-toggle:checked ~ .header-nav {
+        left: 0;
+    }
+
+    .banner{
+        height: 100vh;
+    }
+    .banner-img {
+        max-width:300px; 
+    }
+}
